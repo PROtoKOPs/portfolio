@@ -16,7 +16,7 @@
     <!-- 2. Основной контент -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <!-- Блок Миссия -->
+            <!-- Блок Миссия" -->
             <div class="p-8 border-b border-gray-200">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Наша миссия</h2>
                 <p class="text-gray-600 leading-relaxed">

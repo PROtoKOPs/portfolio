@@ -16,6 +16,19 @@ Route::get('/portfolios', [PortfolioController::class, 'index'])->name('portfoli
 Route::get('/my-portfolios', [PortfolioController::class, 'myPortfolios'])->name('my.portfolios');
 
 
+// Маршруты для портфолио
+Route::prefix('portfolio')->group(function () {
+    // Просмотр всех портфолио (доступно всем)
+    Route::get('/', [PortfolioController::class, 'index'])->name('portfolios.index');
+
+    // Личные портфолио пользователя (требует авторизации)
+    Route::middleware('auth')->group(function () {
+        Route::get('/my', [PortfolioController::class, 'myPortfolios'])->name('my.portfolios');
+        Route::get('/editor', [PortfolioController::class, 'editor'])->name('portfolio.editor');
+        Route::get('/create', [PortfolioController::class, 'create'])->name('portfolio.create');
+    });
+});
+
 // Маршруты для работ
 Route::prefix('projects')->group(function () {
     // Популярные работы
