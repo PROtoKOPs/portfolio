@@ -9,9 +9,9 @@ class PortfolioController extends Controller
     public function index() {
         return view('portfolio.home', [
             'user' => auth()->user(), // Может быть null
-            'projects' => Project::all() // Пример данных
+            
         ]);
-        
+
     }
 
 }
