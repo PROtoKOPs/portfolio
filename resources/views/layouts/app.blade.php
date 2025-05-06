@@ -32,5 +32,7 @@
                 @yield('content')
             </main>
         </div>
+        <!-- resources/views/layouts/app.blade.php -->
+        @include('layouts.footer')
     </body>
 </html>
