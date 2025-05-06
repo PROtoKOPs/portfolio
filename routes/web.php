@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
-
+use App\Http\Controllers\Auth\RegisteredUserController;
 Route::get('/', [App\Http\Controllers\PortfolioController::class, 'index'])->name('home');
 Route::get('/about', function () {
     return view('portfolio.about');
@@ -15,6 +15,15 @@ Route::get('/contact', [PortfolioController::class, 'contact'])->name('contact')
 Route::get('/portfolios', [PortfolioController::class, 'index'])->name('portfolios.index');
 Route::get('/my-portfolios', [PortfolioController::class, 'myPortfolios'])->name('my.portfolios');
 
+
+// Для кнопки "Добавить работу"
+Route::get('/portfolio/create', [PortfolioController::class, 'create'])
+    ->middleware('auth')
+    ->name('portfolio.create');
+
+// Для кнопки "Присоединиться"
+Route::get('/register', [RegisteredUserController::class, 'create'])
+    ->name('register');
 
 // Маршруты для портфолио
 Route::prefix('portfolio')->group(function () {
