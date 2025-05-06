@@ -12,7 +12,7 @@
             </p>
 
             @auth
-                <x-primary-button :href="route('portfolio.create')">
+                <x-primary-button :href="route('portfolios.create')">
                     Добавить работу
                 </x-primary-button>
             @else

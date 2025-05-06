@@ -57,4 +57,8 @@ public function getFullNameAttribute()
             'password' => 'hashed',
         ];
     }
+    public function portfolios()
+{
+    return $this->hasMany(Portfolio::class);
+}
 }

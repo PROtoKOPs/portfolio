@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Portfolio;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
-class PortfolioController extends Controller
+class PortfolioController extends Controller // Убедитесь, что есть это наследование
 {
     public function __construct()
     {
@@ -13,11 +13,11 @@ class PortfolioController extends Controller
     }
 
     public function index()
-    {
-        return view('portfolio.home', [
-            'user' => auth()->user()
-        ]);
-    }
+{
+    $portfolios = Portfolio::with('user')->latest()->paginate(12);
+    return view('portfolio.index', compact('portfolios'));
+}
+
 
     public function myPortfolios()
     {
@@ -33,4 +33,5 @@ class PortfolioController extends Controller
     {
         return view('portfolio.editor');
     }
+
 }
