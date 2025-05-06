@@ -38,7 +38,7 @@
                             <span class="text-gray-500">Работа #{{ $i }}</span>
                         </div>
                         <h3 class="font-medium text-lg mb-2">Название работы</h3>
-                        <p class="text-gray-600 mb-3">Автор: Неизвестно</p>
+                        <p class="text-gray-600 mb-3">Автор: </p>
                         <div class="h-4 bg-gray-200 rounded w-full mb-2"></div>
                         <div class="h-4 bg-gray-200 rounded w-2/3"></div>
                     </div>

@@ -5,7 +5,7 @@ use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\PortfolioController::class, 'index'])->name('home');
 Route::get('/about', [PortfolioController::class, 'about'])->name('about');
 Route::get('/projects', [PortfolioController::class, 'projects'])->name('projects');
 Route::get('/contact', [PortfolioController::class, 'contact'])->name('contact');
