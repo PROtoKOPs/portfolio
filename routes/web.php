@@ -6,11 +6,14 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 
 Route::get('/', [App\Http\Controllers\PortfolioController::class, 'index'])->name('home');
-Route::get('/about', [PortfolioController::class, 'about'])->name('about');
+Route::get('/about', function () {
+    return view('portfolio.about');
+})->name('about');
 Route::get('/projects', [PortfolioController::class, 'projects'])->name('projects');
 Route::get('/contact', [PortfolioController::class, 'contact'])->name('contact');
 
-
+Route::get('/portfolios', [PortfolioController::class, 'index'])->name('portfolios.index');
+Route::get('/my-portfolios', [PortfolioController::class, 'myPortfolios'])->name('my.portfolios');
 
 
 // Маршруты для работ
