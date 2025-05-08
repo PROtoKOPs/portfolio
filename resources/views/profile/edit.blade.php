@@ -5,7 +5,7 @@
         {{-- Хедер страницы --}}
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mb-6">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('Profile') }}
+                {{ __('Профиль') }}
             </h2>
         </div>
 
