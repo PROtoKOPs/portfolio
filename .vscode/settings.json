@@ -1,0 +1,11 @@
+{
+    "php.validate.enable": false,
+    "intelephense.diagnostics.exclude": [
+      "vendor/**"
+    ],
+    
+    "files.watcherExclude": {
+      "**/vendor/**": true
+    }
+  }
+
