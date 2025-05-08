@@ -1,9 +1,9 @@
 {
-    "php.validate.enable": false,
-    "intelephense.diagnostics.exclude": [
-      "vendor/**"
+    "intelephense.diagnostics.enable": true,
+    "intelephense.files.exclude": [
+      "**/vendor/**"
     ],
-    
+    "php.validate.enable": false,
     "files.watcherExclude": {
       "**/vendor/**": true
     }
